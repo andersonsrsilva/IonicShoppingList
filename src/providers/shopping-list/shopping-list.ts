@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {AngularFireDatabase, AngularFireList} from 'angularfire2/database';
+import {AngularFireDatabase} from 'angularfire2/database';
 import {Item} from "../../models/item";
 
 @Injectable()
@@ -20,5 +20,9 @@ export class ShoppingListProvider {
 
   editItem(item: Item) {
     return this.shoppingListRef.update(item.key, item);
+  }
+
+  removeItem(item: Item) {
+    return this.shoppingListRef.remove(item.key);
   }
 }

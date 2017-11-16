@@ -12,6 +12,7 @@ import {HomePage} from "../pages/home/home";
 import {AddShoppingItemPage} from "../pages/add-shopping-item/add-shopping-item";
 import { ShoppingListProvider } from '../providers/shopping-list/shopping-list';
 import {EditShoopingItemPage} from "../pages/edit-shooping-item/edit-shooping-item";
+import {ToastService} from '../providers/toast.service';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import {EditShoopingItemPage} from "../pages/edit-shooping-item/edit-shooping-it
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    ShoppingListProvider
+    ShoppingListProvider,
+    ToastService
   ]
 })
 export class AppModule {
